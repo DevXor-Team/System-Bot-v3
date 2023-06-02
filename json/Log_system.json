@@ -1,0 +1,12 @@
+{
+  "message_log":null,
+  "role_log":null,
+  "channel_log":null,
+  "voice_log":null,
+  "nickname_log":null,
+  "joinleave_log":null,
+  "member_role_log":null,
+  "emoji_log":null,
+  "channel_update_log":null,
+  "ban_unban_log": null
+} 

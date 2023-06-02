@@ -1,0 +1,29 @@
+{
+
+"token": null,
+"port":3000,
+"PREFIX": "!",
+"BOT_ID":"",
+"GUILD": "",
+"allMentions": false, 
+"TAXCHANNEL":["","",""],
+"status": ["!help", "developer tools"],
+"time_status":4000,
+"status2":"online",
+"activity":"WATCHING",
+  
+
+"AUTOLINECHANNEL": ["929826856805486622","890382500491329558","991684194294038588"],
+"LINE": "https://cdn.discordapp.com/attachments/1068980094682550312/1109128010566737990/png_20220901_230019_0000-01.jpg",
+
+"sugid": ["929826856805486622","1020087361897517127","1020087827070988319","1020088462847787048"],
+
+
+
+  
+"API_BOT_Developer_Tools":"https://localhost/ABO_FAGHALY:3080",
+"_Developer_Tools":"https://discord.gg/developer-tools",
+
+
+"AME_API":"061009fe1127379c9bfa4030a4951396f67a3da0d0190f3c342f091b8cea1cfbd94fbc5bfd91b6d9ae1061d7243e0c2d75a07cc3122c6179851ca9d488b46a8e"
+}
