@@ -75,12 +75,6 @@ module.exports = {
 							value: 'fun',
               emoji: '992056774335135864',
             },
-            {
-							label: 'Music',
-							description: 'To view the music commands',
-							value: 'music',
-              emoji: '992056774335135864',
-            },
 						{
 				  		label: 'Delete list',
 			  			description: 'Delete messages list',
@@ -276,25 +270,6 @@ let embed_1 = new MessageEmbed()
          }
     })
     
-          b.update({ embeds:[embed_1], components:[row, button] }).catch(err => {});  } else if(b.values[0] === "music")
-  {
-let embed_1 = new MessageEmbed()
-
-  .setAuthor({ name :`Music Commands:`,iconURL: client.user.displayAvatarURL({dynamic : true})})
-       .setColor(message.guild.me.displayHexColor) 
-      .setTimestamp()
-        
-        musicFiles.map((value) => {
-        const file = require(value);
-        const splitted = value.split("/");
-        const directory = splitted[splitted.length - 2];
-
-
-        if (file.name) {
-            const properties = { directory, ...file };
-            embed_1.addFields({ name:`${PREFIX}${properties.name}`,value: `${properties.description}`,inline: true})
-        }
-    })
           b.update({ embeds:[embed_1], components:[row, button] }).catch(err => {});  } else if(b.values[0] === "delete") {
           msg.delete().catch(err => {});
           message.delete().catch(err => {});
