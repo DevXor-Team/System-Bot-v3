@@ -1,6 +1,6 @@
 //All rights reserved to the  TURBO and ABO FARGHALY  //
 // TURBO ==  TURBO#9890   -- ABO FARGHALY == ABO FARGHALY#1222 // 
-//Developer tools === https://discord.gg/Developer-tools //
+//Developer tools === https://discord.gg/devtools-931536214228611102 //
 //We do not allow the transfer or use of this code at all// 
 
 const { MessageButton, MessageActionRow, MessageEmbed, MessageSelectMenu } = require("discord.js");
@@ -26,8 +26,6 @@ module.exports = {
         const funFiles = await globPromise(`${process.cwd()}/commands/fun/**/*.js`);
         const gamesFiles = await globPromise(`${process.cwd()}/commands/games/**/*.js`);
 
-
-
        let menu = new MessageSelectMenu()
       .setCustomId(`help_${message.author.id}`)
       .setPlaceholder("Choose a category")
@@ -37,55 +35,55 @@ module.exports = {
 							label: 'Information',
 							description: 'To view the info commands',
 							value: 'information',
-              emoji: '992056774335135864',
+              emoji: '1139622432144097462',
 						},
             {
 							label: 'Owner',
 							description: 'To view the owner commands',
 							value: 'owner',
-              emoji: '992056774335135864',
+              emoji: '1139622432144097462',
             },
             {
 							label: 'Admin',
 							description: 'To view the admin commands',
 							value: 'admin',
-              emoji: '992056774335135864',
+              emoji: '1139622432144097462',
             },
             {
 							label: 'General',
 							description: 'To view the general commands',
 							value: 'general',
-              emoji: '992056774335135864',
+              emoji: '1139622432144097462',
             },
              {
 							label: 'Activities',
 							description: 'To view the Activities commands',
 							value: 'activities',
-              emoji: '992056774335135864',
+              emoji: '1139622432144097462',
             },
             {
 							label: 'Games',
 							description: 'To view the Games commands',
 							value: 'games',
-              emoji: '992056774335135864',
+              emoji: '1139622432144097462',
             },
             {
 							label: 'Fun',
 							description: 'To view the FUN commands',
 							value: 'fun',
-              emoji: '992056774335135864',
+              emoji: '1139622432144097462',
             },
             {
 							label: 'Music',
 							description: 'To view the music commands',
 							value: 'music',
-              emoji: '992056774335135864',
+              emoji: '1139622432144097462',
             },
 						{
 				  		label: 'Delete list',
 			  			description: 'Delete messages list',
 				  		value: 'delete',
-             emoji:'992056774335135864',
+             emoji:'1139622432144097462',
             }])
     
    let row = new MessageActionRow()
@@ -102,7 +100,7 @@ module.exports = {
             new MessageButton()
   .setStyle('LINK')
   .setLabel('Server Support')
-  .setURL(`https://discord.gg/WxGZK8SsxM`))
+  .setURL(`https://discord.gg/devtools-931536214228611102`))
       
     let embed = new MessageEmbed()    
       
@@ -110,7 +108,7 @@ module.exports = {
     
     System Bot v3**`)
 
-      .setImage(`https://cdn.discordapp.com/attachments/965806495109369926/1109120147429535795/dev_copy_2.gif`)
+      .setImage(`https://media.discordapp.net/attachments/965806495109369926/1109120147429535795/dev_copy_2.gif?width=769&height=432`)
 
 .setColor(message.guild.me.displayHexColor)
       .setTimestamp()
@@ -121,7 +119,7 @@ module.exports = {
         if(b.values[0] === "admin") {   
       let embed_1 = new MessageEmbed()
 
-        .setAuthor({ name :`Admin Commands:`,iconURL: client.user.displayAvatarURL({dynamic : true})})
+        .setAuthor(`Admin Commands:`, client.user.displayAvatarURL({dynamic : true}))
         .setColor(message.guild.me.displayHexColor) 
       .setTimestamp()
           
@@ -132,7 +130,7 @@ module.exports = {
 
         if (file.name) {
             const properties = { directory, ...file };
-            embed_1.addFields({ name:`${PREFIX}${properties.name}`,value: `${properties.description}`,inline: true})
+            embed_1.addField(`${PREFIX}${properties.name}`, `${properties.description}`, true)
         }
     })
           b.update({ embeds:[embed_1], components:[row, button] }).catch(err => {});
@@ -146,7 +144,7 @@ module.exports = {
           let seconds = Math.floor(client.uptime / 1000) % 60;    
     let embed_1 = new MessageEmbed()
 
-  .setAuthor({ name :`Information Bot:`,iconURL: client.user.displayAvatarURL({dynamic : true})})  
+  .setAuthor(`Information Bot:`, client.user.displayAvatarURL({dynamic : true}))  
       
       .setColor(message.guild.me.displayHexColor) 
       
@@ -184,7 +182,7 @@ Uptime: ${seconds}s ${minutes}m ${hours}h ${days}d\`\`\``
   {
 let embed_1 = new MessageEmbed()
 
-  .setAuthor({ name :`Owner Commands:`,iconURL: client.user.displayAvatarURL({dynamic : true})})
+  .setAuthor(`Owner Commands:`, client.user.displayAvatarURL({dynamic : true}))
        .setColor(message.guild.me.displayHexColor) 
       .setTimestamp()
                  
@@ -195,14 +193,14 @@ let embed_1 = new MessageEmbed()
 
         if (file.name) {
             const properties = { directory, ...file };
-            embed_1.addFields({ name:`${PREFIX}${properties.name}`,value: `${properties.description}`,inline: true})
+            embed_1.addField(`${PREFIX}${properties.name}`, `${properties.description}`, true)
         }
     })
           b.update({ embeds:[embed_1], components:[row, button] }).catch(err => {});    } else if(b.values[0] === "general")
   {
 let embed_1 = new MessageEmbed()
 
-  .setAuthor({ name :`General Commands:`,iconURL: client.user.displayAvatarURL({dynamic : true})})
+  .setAuthor(`General Commands:`, client.user.displayAvatarURL({dynamic : true}))
        .setColor(message.guild.me.displayHexColor) 
       .setTimestamp()
         
@@ -213,7 +211,7 @@ let embed_1 = new MessageEmbed()
 
         if (file.name) {
             const properties = { directory, ...file };
-            embed_1.addFields({ name:`${PREFIX}${properties.name}`,value: `${properties.description}`,inline: true})
+            embed_1.addField(`${PREFIX}${properties.name}`, `${properties.description}`, true)
         }
     })
     
@@ -221,7 +219,7 @@ let embed_1 = new MessageEmbed()
   {
 let embed_1 = new MessageEmbed()
 
-  .setAuthor({ name :`Activities Commands:`,iconURL: client.user.displayAvatarURL({dynamic : true})})
+  .setAuthor(`Activities Commands:`, client.user.displayAvatarURL({dynamic : true}))
        .setColor(message.guild.me.displayHexColor) 
       .setTimestamp()
         
@@ -232,7 +230,7 @@ let embed_1 = new MessageEmbed()
 
         if (file.name) {
             const properties = { directory, ...file };
-            embed_1.addFields({ name:`${PREFIX}${properties.name}`,value: `${properties.description}`,inline: true})
+            embed_1.addField(`${PREFIX}${properties.name}`, `${properties.description}`, true)
          }
     })
 
@@ -241,7 +239,7 @@ let embed_1 = new MessageEmbed()
   {
 let embed_1 = new MessageEmbed()
 
-  .setAuthor({ name :`Games Commands:`,iconURL: client.user.displayAvatarURL({dynamic : true})})
+  .setAuthor(`Games Commands:`, client.user.displayAvatarURL({dynamic : true}))
        .setColor(message.guild.me.displayHexColor) 
       .setTimestamp()
         
@@ -252,7 +250,7 @@ let embed_1 = new MessageEmbed()
 
         if (file.name) {
             const properties = { directory, ...file };
-            embed_1.addFields({ name:`${PREFIX}${properties.name}`,value: `${properties.description}`,inline: true})
+            embed_1.addField(`${PREFIX}${properties.name}`, `${properties.description}`, true)
          }
     })
 
@@ -261,7 +259,7 @@ let embed_1 = new MessageEmbed()
   {
 let embed_1 = new MessageEmbed()
 
-  .setAuthor({ name :`Fun Commands:`,iconURL: client.user.displayAvatarURL({dynamic : true})})
+  .setAuthor(`Fun Commands:`, client.user.displayAvatarURL({dynamic : true}))
        .setColor(message.guild.me.displayHexColor) 
       .setTimestamp()
         
@@ -272,10 +270,29 @@ let embed_1 = new MessageEmbed()
 
         if (file.name) {
             const properties = { directory, ...file };
-            embed_1.addFields({ name:`${PREFIX}${properties.name}`,value: `${properties.description}`,inline: true})
+            embed_1.addField(`${PREFIX}${properties.name}`, `${properties.description}`, true)
          }
     })
     
+          b.update({ embeds:[embed_1], components:[row, button] }).catch(err => {});  } else if(b.values[0] === "music")
+  {
+let embed_1 = new MessageEmbed()
+
+  .setAuthor(`Music Commands:`, client.user.displayAvatarURL({dynamic : true}))
+       .setColor(message.guild.me.displayHexColor) 
+      .setTimestamp()
+        
+        musicFiles.map((value) => {
+        const file = require(value);
+        const splitted = value.split("/");
+        const directory = splitted[splitted.length - 2];
+
+
+        if (file.name) {
+            const properties = { directory, ...file };
+            embed_1.addField(`${PREFIX}${properties.name}`, `${properties.description}`, true)
+        }
+    })
           b.update({ embeds:[embed_1], components:[row, button] }).catch(err => {});  } else if(b.values[0] === "delete") {
           msg.delete().catch(err => {});
           message.delete().catch(err => {});
